@@ -1,0 +1,52 @@
+@import"reset.sass";
+
+@mixin size($width,$height){
+	width:$width;
+	border-radius:50px;
+
+	height:$height;}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+#test1{
+	@include size(100px,100px);
+	box-shadow:1px 2px 3px rgba(#000,.8);
+	box-shadow:1px 2px 3px rgba(#000,.8);
+	box-shadow: 1px 1px 1px rgba(#000,0.6);
+	box-shadow:1px 2px 3px rgba(#000,.8);
+	border: 1px solid #000;
+	border: 1px solid #000;
+	border: 1px solid #000;
+	border: 1px solid #000;
+	border: 10px solid #000;
+	border-radius: 50%;
+	border-radius: 50%;
+	border-radius: 50%;
+	transform: translateX(45px);
+	display: flex;
+	// @include box-radius(50px);
+}
+
+#test2{
+	@extend #test1;
+}
+
+@include keyframes(move) {
+	0%{
+		width: 100px;
+	}
+	100%{
+		width: 200px;
+	}
+
+}
